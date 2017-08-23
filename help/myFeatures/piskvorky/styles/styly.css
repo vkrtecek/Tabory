@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	font-family: monospace;
+	text-align:center;
+}
+body, table, input{
+	color:blueviolet;
+	border-color: blueviolet;
+	background-color:#100020;
+}
+#GamingTable{
+	border:solid blueviolet 2px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	cursor:url(../img/x.jpg), pointer;
+}
+
+#GamingTable td{
+	height:20px;
+	width:20px;
+}
+.disabled{
+	cursor:not-allowed;
+}
+::selection{
+	color: red;
+	background-color: blue;
+}
+span#again{
+	color:yellowgreen;
+	cursor:pointer;
+	text-decoration:underline;
+}

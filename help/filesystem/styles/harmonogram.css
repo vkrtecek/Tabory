@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document */
+
+table#rozpis{
+	border:solid 3px black;
+	margin:3vh 0 2vh 3%;
+	max-width:92%;
+}
+table#rozpis h2{
+	font-family:Calibri, sans-serif;
+	font-size:24px;
+	text-align:center;
+	margin: 15px 0 15px 0;
+}
+#rozpis th{ background-color:#FFE }
+#rozpis td, .table_nahled td{ text-align:center; padding:5px; }
+#rozpis td, th{
+	font-family:Calibri, sans-serif;
+	font-size:15px;
+	text-align:center;
+	padding:4px 6px 4px 6px;
+}
+
+.sude{
+	background-color:rgb(147, 230, 247); /* #93E6F7 */
+}
+.liche{
+	background-color:rgb(134, 254, 145);
+}
+#addDay{ position:relative; top:2vh; left:2vw; max-width:200px; }/* back to harmonogram */
+h1{ text-align:center; font-family:Verdana, Geneva, sans-serif; font-size:18px; }
+
+#modifyDay{ position:absolute; top:2vh; left:120px; max-width:12vw; min-width:180px;}
+
+
+input[type=text].harmonogram{ width:70px; }
+input.cislo{ max-width:15px; }
+
+
+
+.redBl{ font-weight:bold; color:white; background-color:#000; }
+.blok{ min-width:10vw; }
+
+.nahled{ position:absolute; top:15vh; left:35vw; border:solid black 3px; }
+.nahled .td_nahled{ min-width:8vw }
+
+.etapa{ background-color:#FE9CAB; color:#AB0325; }
+
+hr, p.konec{ margin:0.5vh 2vw 1vh 0vw; }
+
+
+
+
+img.manipulate{
+	border:solid black 1px;
+	margin:0 0 -3px 2px;
+	cursor:pointer;
+}
+
+#div_add{ margin: 10vh 4vw 0 5vw; }
+#addConcreteDay{
+	width:100%;
+}
+table.addDayTable td{
+	text-align:left;
+	padding:3px;
+}
+.TD-Mor1, .TD-Mor2, .TD-Af1, .TD-Af2, .TD-Nig{
+	width:12vw;
+	max-width:200px;
+}
+.table_nahled{
+	position:absolute;
+	top:200px;
+	left:5%;
+	width:90%;
+}
+#modifyConcreteDay{
+	width:100%;
+}
+table.addDayTable td{
+	text-align:left;
+	padding:3px;
+}
+.addDayTable textarea{
+	width:96%;
+	max-width:96%;
+	min-height:80px;
+	padding:3px;
+}
+
+
+table#statistic{
+	border:solid black 2px;
+	display:inline-table;
+	margin-rigth:12rem;
+	margin-bottom:1rem;
+}
+table#statisticPercentage{
+	border:solid black 2px;
+	display:inline-table;
+}
+table#statisticPercentage th, table#statistic th {
+	background-color:#CC9;
+}
+table#statisticPercentage td, table#statistic td {
+	padding:3px;
+	background-color:#CBC;
+}
+table#statisticPercentage tr:hover, table#statistic tr:hover {
+	color:#FF9;
+}
+
+.nobodyTD{
+	background-color:red;
+}

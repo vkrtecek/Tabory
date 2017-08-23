@@ -1,0 +1,151 @@
+	@charset "utf-8";
+	/* CSS Document */
+	
+*{
+	margin:0;
+	padding:0;
+}
+body::after{
+	content: "";
+	background: url('../../soubory/background.jpg') no-repeat;
+	background-attachment: fixed;
+	opacity: 0.25;
+	top: 0;
+	left: 0;
+	position:fixed;
+	z-index: -1;
+	background-color: #CCC;
+	width:100%;
+	height:100%;
+	background-size:100%;
+}
+#back{
+	background:url('../../home.jpeg') no-repeat;
+	display:block;
+	width:40px;
+	height:40px;
+	margin-top: 1em;
+	position:fixed;
+	left:90vw;
+	border:solid #0CF 1px;
+}
+#back:hover{
+	cursor:pointer;
+	border-color:black;
+}
+	
+#allComments{
+	position:absolute;
+	top:5vh;
+	left:45vw;
+}
+#addComment{
+	position:absolute;
+	top:5vh;
+	left:2vw;
+	max-width:500px;
+	padding:10px;
+	border:solid 2px green;
+	max-width:36vw;
+}
+#addComment textarea{
+	max-width:35vw;
+}
+#addComment input{
+	max-width:12vw;
+}
+
+#subject{
+	margin-bottom: 6px;
+}
+div.prispevek
+{
+	border:black 3px solid;
+	max-width: 700px;
+	width:50vw;
+	margin-bottom: 5px;
+	padding-right:2px;
+	background-color:#5CD1F3;
+}
+.textPrispevku
+{
+	padding: 3px 10px 0 10px;
+}
+.subject
+{
+	padding: 3px 10px 4px 10px;
+	text-decoration:underline;
+}
+.jmeno
+{
+	padding: 3px;
+	text-align:right;
+}
+.datum
+{
+	padding: 3px;
+	text-align:right;
+}
+h2{ 
+	text-decoration: underline;
+	margin-bottom:10px;
+}
+h3{
+	color: #F3C;
+	border-bottom: 1px dotted #DDD;
+	font-family: "Trebuchet MS";
+}
+.smazat_prispevek{
+	float:right;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:9px;
+	margin: 13px 10px 0 0;
+	color:#F09;
+	padding:1px;
+	cursor:pointer;
+}
+
+div#div_create_new_user {
+	margin-left:5rem;
+	margin-top:2rem;
+	width:30vw;	
+}
+div#here_drow{
+	padding:2rem 0 0 2rem;
+	
+}
+
+
+div#update {
+	display:inline-table;
+	border:solid 1px black;
+	padding:5px;
+	margin-top:3rem;
+	margin-left:1rem;
+}
+div#update td, div#update th {
+	padding:3px;
+}
+div#update tr{
+	background-color:#9FF;
+}
+div#update tr:nth-child(even){
+	background-color:#CFF;
+}
+div#update th{
+	background-color:#3F9;
+}
+div#update tr:hover{
+	background-color:yellow;
+}
+div#status {
+	margin:1rem;
+	padding:5px;
+}
+
+
+
+div#logHere{
+	margin:0.7rem;
+	font-family:"Courier New", Courier, monospace;
+}

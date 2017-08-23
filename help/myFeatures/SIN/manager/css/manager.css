@@ -1,0 +1,40 @@
+@charset "utf-8";
+*{padding:0; margin:0; font-family: calibri, verdana, sans-serif;}
+body {background-color: #bcd748; background-image: url(../veci/bodybackground.jpg); background-repeat: no-repeat; background-position: center top; font-family: Tahoma, Geneva, sans-serif;}
+div#box{width:805px; margin: auto; margin-top: 204px; background-color:#95af41}
+div#header{background-image:url(../veci/topstrip.jpg); background-repeat:no-repeat; height:20px;}
+div#content{float:right; width:581px; border:solid black 1px;;  background-color:white; padding: 10px;}
+div#footer{ background-image:url(../veci/botstrip.jpg); height:16px; clear:both;}
+div#menu{float:left; width:200px; margin-left:1px; }
+
+ul li.lajna{ background-image: none; background-color: white; font-size: 16px; display: inline; float: right; margin: 2px 10px 0 10px;}
+ul li{display:inline; float:right; margin: 2px 10px 0 10px; font-size:16px; }
+a{color:black; text-decoration:none; font-weight:bolder; font-size:11px;}
+a.lajna{font-size:15px; color: #006400; }
+a.lajna2{color: black; font-size:15px; float:bottom; }
+ul{list-style:none; }
+ul li:hover{cursor:pointer; }
+ul li a:hover{color:white;}
+ul li a.lajna2:hover{color:grey;}
+ul li a{display:block;}
+ul li.dole{ background-image:url(../veci/btn-bg.jpg); line-height:14px; font-size:12px; padding:5px 0 5px 13px;}
+
+p.tucne{font-size:14px; text-align:justify; margin:0;}
+p{font-size:14px; text-align:justify; margin-left:20px; margin-bottom:10px;}
+p.odkaz{clean:both;}
+h1{border-bottom:green dotted 1px; color:green; text-align: right; font-size:20px; padding-right:10px; margin-bottom: 12px;}
+h3{color:red; border-bottom:red 1px solid; margin-bottom:15px;}
+
+div.cerveny{float:right; width:280px;}
+ul li.cerveny:before{content:url(../veci/rds.jpg)" ";}
+ul li.cerveny{font-size:12px; float:left; margin: 20px 0 20px 0;}
+ul li.cerveny{cursor:default;}
+div.zluty{float:left; width:280px; margin: 20px 0 20px 0;}
+ul li.zluty:before{ content:url(../veci/yds.jpg)" ";}
+ul li.zluty{font-size:12px; float:left;}
+ul li.zluty{cursor:default;}
+
+img.logo{float:right;}
+p.odsazene{padding-right:0px;}
+ul.posledni li:before{content:"*  ";}
+ul.posledni li{ display:block; float:center; margin:5px 0 5px 45px; font-size:12px;}

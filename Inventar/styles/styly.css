@@ -1,0 +1,163 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+body::after {
+  content: "";
+  background: url('../pozadi.jpg') center no-repeat;
+  background-attachment: fixed;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position:fixed;
+  z-index: -1;  
+  padding:20px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#body{
+	margin:auto;
+	max-width:1900px;
+}
+.right{
+	float:right;
+	margin-right:2vw;
+	display:inline;
+}
+h1{
+	margin-left:30vw;
+	display:inline;
+}
+.item img{
+	float:left;
+}
+.item h2{
+	display:block;
+	float:left;
+	font-family:monospace;
+	font-size:20px;
+	width:10vw;
+	text-align:center;
+	bborder:solid black 1px;
+}
+.item .popis{
+	text-align:left;
+	width:30vw;
+	float:left;
+	margin:30px 0 0 2vw;
+	bborder:solid black 1px;
+}
+div.nazev{
+	display:inline;
+	float:left;
+	height:100px;
+	width:12vw;
+	margin-left:1vw;
+	overflow-y:scroll;
+	bborder:solid black 1px;
+}
+div.kategorie{
+	clear:both;
+	margin:auto;
+	text-align:center;
+	color:#0CC;
+}
+.oznameni{
+	margin:auto;
+	border:2px red solid;
+	width:23vw;
+	padding:10px;
+}
+#items{
+	width:70vw;
+	margin:auto;
+	margin-top:15vh;
+}
+.item{
+	margin:1.7%;
+	padding:3px;
+	border-radius:1%;
+	border:solid 2px #0033FF;
+	padding:5px;
+	background-color:#FFC;
+}
+.red_border{
+	border:solid 1px red;
+}
+p{
+	margin:0;
+}
+.red{
+	color:red;
+}
+.smazat_prispevek, .upravit_prispevek{
+	float:right;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:9px;
+	margin: 13px 10px 0 0;
+	padding:1px;
+}
+.smazat_prispevek:hover, .upravit_prispevek:hover{
+	text-decoration:underline;
+	cursor:pointer;
+}
+.smazat_prispevek{
+	color:#F09;
+}
+.upravit_prispevek{
+	color:blue;
+}
+img{
+	cursor:cell;
+}
+button.menu{
+	cursor:pointer;
+	margin-top:3px;
+}
+button.menu:hover{
+	text-decoration:underline;
+}
+
+
+#form_back{
+	position:static;
+	float:right;
+	right:1rem;
+	top:3px;
+}
+#back{
+	background:url('../../home.jpeg') no-repeat;
+	display:block;
+	width:40px;
+	height:40px;
+	border:solid #0CF 1px;
+}
+#back:hover{
+	border:solid black 1px;
+	cursor:pointer;
+}
+
+#menuHere{
+	position:fixed;
+	right:20px;
+	top:10px;
+}
+#itemsHere > img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate( -50%, -50% );
+}
+
+
+#clear{
+	cursor:pointer;
+	font-size:120%;
+	margin-left:1rem;
+}
+
+

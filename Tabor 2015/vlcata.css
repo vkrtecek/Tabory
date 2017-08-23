@@ -1,0 +1,260 @@
+@charset "utf-8";
+/* CSS Document */
+body::after{
+	content: "";
+	background: url('soubory/pozadi.jpg') no-repeat;
+	background-attachment: fixed;
+	opacity: 0.25;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position:fixed;
+	z-index: -1;  
+	padding:20px;
+	background-color: rgba(0, 0, 0, 1);
+	width:100%;
+	height:100%;
+	background-size:100%;
+}
+#body{
+	margin-top:2vh
+}
+#back{
+	background:url('../home.jpeg') no-repeat;
+	display:block;
+	width:40px;
+	height:40px;
+	border:solid #0CF 1px;
+}
+#back:hover{
+	cursor:pointer;
+	border:solid black 1px;
+}
+button#back > img{
+	clear:both;
+	text-decoration:none;
+	font-size:14px;
+	cursor:pointer;
+	border:solid transparent 1px;
+}
+#form_back{
+	position:fixed;
+	float:right;
+	right:1rem;
+	top:3px;
+}
+#prihlasit{
+	float:right;
+	padding-right:20px;
+	margin-top:50px;
+}
+#table_menu{
+	border:none;
+}
+#pismo{
+	width:60vw;
+}
+li > p{
+	margin:0;
+	margin-bottom:5px;
+}
+p{
+	font-family:Calibri, sans-serif;
+	font-size:16px;
+	text-align:justify;
+	margin-left:15px;
+}
+h1{
+	font-family:Arial, Helvetica, sans-serif;
+}
+h2{
+	font-family:Calibri, sans-serif;
+	font-size:24px;
+	text-align:center;
+}
+h2#adresar{
+	font-family:Calibri, sans-serif;
+	font-size:24px;
+	text-align:left;
+}
+h3{
+	text-align:center;
+	font-family:Verdana, Geneva, sans-serif;
+}
+h5{
+	text-decoration:underline;
+}
+.red{
+	color:red;
+}
+.menu{
+	text-decoration:none;
+	background:#FF0080;
+	color:white;
+	padding:4px;
+	text-transform:uppercase;
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:15px;
+}
+.menu:hover, .menu_modre:hover, .menu_dalsi:hover{
+	color:blue;
+}
+.menu_modre{
+	text-decoration:none;
+	background:#C3C;
+	color:white;
+	padding:4px;
+	text-transform:lowercase;
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+}
+.menu_dalsi{
+	text-decoration:none;
+	background:#F6F;
+	color:white;
+	padding:4px;
+	text-transform:uppercase;
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:15px;
+}
+.div_menu{
+	position:fixed;
+	right:1%;
+	top:50px;
+	max-width:30vw;
+}
+#velkym{
+	text-transform:uppercase;
+}
+
+
+
+
+
+table#rozpis{
+	border:solid 3px black;
+	margin-right:2vw;
+}
+table#vareni, table#jidlo, table#kop, table#kop_2{
+	border:solid 3px black;
+	margin:2vw;
+}
+#vareni th{
+	background-color:#CCC;
+	padding:0.5vw;
+}
+#vareni td{
+	background-color:#FFF;
+	padding:0.5vw;
+}
+td, th{
+	font-family:Calibri, sans-serif;
+	text-align:center;
+	padding:2px;
+}
+.tucne{
+	font-weight:bold;
+}
+.etapa{
+	background-color:rgb(255, 199, 206);
+	color:rgb(156, 0, 6);
+}
+.sude{
+	background-color:rgb(147, 230, 247);
+}
+.liche{
+	background-color:rgb(134, 254, 145);
+}
+#menu_blue{
+	background-color:blue;
+	float:right;
+	color:white;
+	font-weight:bold;
+	width:2vw;
+	padding:1px;
+	text-align:center;
+}
+#menu_blue:hover{
+	cursor:pointer;
+}
+#menu_red{
+	width:300px;
+	float:right;
+}
+#menu_red::after{
+	content: "";
+	background:#FF9;
+	background-attachment: fixed;
+	opacity: 0.4;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position:fixed;
+	z-index: -1;  
+	padding:20px;
+	background-color: rgba(0, 0, 0, 1);
+	width:100%;
+	height:100%;
+	background-size:100%;
+}
+#menu_red > #table_menu tr{
+	float:right;
+}
+td.odsadit{
+	width:3vw;
+}
+.center{
+	text-align:center;
+	margin:auto;
+}
+
+.last{
+	border-bottom:3px solid black;
+}
+table#jidlo, #legenda{
+	border:solid 3px black;
+	margin:2vw;
+	display:inline-block;
+}
+.normal_bun{
+	height:2vh;
+	width:300px;
+}
+.p_tur{
+	background-color:#FFC;
+}
+.d_tur{
+	background-color:#C66;
+}
+.t_tur{
+	background-color:#0F9;
+}
+
+
+#kop img{
+	cursor:pointer;
+}
+.tucne_podbarveni{
+	background-color:#DFDFDF;
+	font-weight:bold;
+}
+#kop_2 th{
+	background-color:#CCC;
+}
+#kop_2{
+	background-color:#FFF;
+}
+
+
+
+#center{
+	margin:auto;
+}
+#center > h1{
+	text-align:center;
+}

@@ -1,0 +1,29 @@
+<--!@mail -> odesílatel-->
+<html>
+<head>
+<style>
+#wrapper {
+    width: 500px;
+    border: 2px solid black;
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#first {
+    width: 300px;
+    float:left; /* add this */
+    border: 2px solid red;
+}
+#second {
+    border: 2px solid green;
+    overflow: hidden; /* if you don't want #second to wrap below #first */
+}
+</style>
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="first">Stack Overflow is for professional and enthusiast programmers, people who write code because they love it.</div>
+    <div id="second">When you post a new question, other users will almost immediately see it and try to provide good answers. This often happens in a matter of minutes, so be sure to check back frequently when your question is still new for the best response.</div>
+</div>
+
+</body>
+</html>

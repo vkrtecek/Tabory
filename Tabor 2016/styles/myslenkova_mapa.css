@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+div#velky_toggle p, div#velky_toggle a{
+	font-size:16px;
+}
+div#velky_toggle{
+	margin:auto;
+	width:100vw;
+}
+div.velky_toggle{
+	margin:auto;
+	min-width:15rem;
+	text-align:center;
+	background-color:#804040;
+	float:left;
+	color:white;
+}
+.velky_toggle > p{
+	padding:5px;
+	cursor:n-resize;
+	border-left:solid white 0.2em;
+}
+div.maly{
+	background-color:#CCC;
+	border:solid black 1px;
+	border-top:none;
+	min-height:10vh;
+	padding:0 1em 0 1em;
+	text-align:left;
+	width:20rem;
+	overflow:visible;
+}
+.maly > a{
+	text-transform:uppercase;
+	text-decoration:none;
+	color:#09F;
+	line-height:30px;
+}

@@ -1,0 +1,27 @@
+20. květen 2017 | 01:19:06			Someone with IP=127.0.0.1 just wanted to send forgotten password (mail=dde)
+20. květen 2017 | 01:19:30			krtek just created new camp to 2017-05-24
+22. květen 2017 | 23:10:39			Creating new user kkkd had failed
+22. květen 2017 | 23:10:42			Creating new user kkkd had failed
+22. květen 2017 | 23:10:46			Creating new user kkkd had failed
+22. květen 2017 | 23:10:47			Creating new user kkkd had failed
+22. květen 2017 | 23:11:08			Creating new user kkkd had failed
+22. květen 2017 | 23:11:23			Created new user kkkd
+23. květen 2017 | 00:22:44			Creating new user kkkdd had failed
+23. květen 2017 | 00:23:21			Creating new user llll had failed
+23. květen 2017 | 00:23:59			Creating new user llll had failed
+23. květen 2017 | 00:27:20			Creating new user l had failed
+23. květen 2017 | 00:27:58			Creating new user g had failed
+23. květen 2017 | 00:28:56			Creating new user d had failed
+23. květen 2017 | 00:32:02			Creating new user k had failed
+23. květen 2017 | 00:33:51			Creating new user u had failed
+23. květen 2017 | 00:34:54			Created new user d
+24. květen 2017 | 00:22:35			Update user Jirka
+24. květen 2017 | 00:23:54			Update user Nemo (id=5)
+24. květen 2017 | 00:24:31			Update user Nemo (id=5) - new telefon -> NULL
+24. květen 2017 | 00:24:48			Update user Mára (id=19) - mail -> "mara@zlin6.cz"
+05. červenec 2017 | 00:28:49			krtek just created new camp to 2018-07-06
+05. červenec 2017 | 01:03:27			krtek just created new camp to 2018-07-14
+05. červenec 2017 | 01:08:31			krtek just created new camp to 2018-07-26
+16. červenec 2017 | 18:20:18			krtek just created new camp to 2017-07-08
+16. červenec 2017 | 18:23:07			krtek just created new camp to 2017-07-03
+16. červenec 2017 | 18:23:22			krtek just created new camp to 2018-07-22

@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+}
+#mainTable{
+}
+.tableToTd{	
+	min-width:80px;
+	min-height:80px;
+}

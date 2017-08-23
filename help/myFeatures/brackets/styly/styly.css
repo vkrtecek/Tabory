@@ -1,0 +1,25 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: monospace;
+	font-size: 101%;
+	color:blueviolet;
+}
+p{
+	margin-left:50%;
+	transform: translateX( -50% );
+}
+th, td{
+	padding: 0 7px 0 7px;
+}
+table{
+	margin-bottom: 13px;
+}
+body{
+	background-color:#100020;
+	margin:13px;
+}
+::selection{
+	color: red;
+	background-color: blue;
+}

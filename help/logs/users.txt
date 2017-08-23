@@ -1,0 +1,13 @@
+24. květen 2017 | 00:26:26			Update user Nemo (id=5) - telefon -> NULL
+24. květen 2017 | 00:34:14			Update user Bagris (id=10) - telefon -> NULL
+24. květen 2017 | 00:34:27			Update user Jirka (id=11) - telefon -> "666666555"
+24. květen 2017 | 00:34:48			Update user Jirka (id=11) - telefon -> NULL
+24. květen 2017 | 01:39:22			Deleted user  (id=)
+24. květen 2017 | 01:39:51			Deleted user  (id=)
+24. květen 2017 | 01:40:42			Deleted user Anče (id=30)
+04. červenec 2017 | 20:13:08			Update user Nemo (id=5) - kuchar -> "0"
+04. červenec 2017 | 20:13:24			Update user Jeňa (id=3) - telefon -> "444511815"
+04. červenec 2017 | 23:46:51			Update user Salo (id=6) - admin -> "0"
+04. červenec 2017 | 23:46:54			Update user Salo (id=6) - admin -> "0"
+04. červenec 2017 | 23:49:35			Update user Dale (id=14) - aktivni -> "1"
+16. červenec 2017 | 15:06:26			Update user Jeňa (id=3) - admin -> "1"

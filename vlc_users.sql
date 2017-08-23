@@ -1,0 +1,50 @@
+CREATE TABLE IF NOT EXISTS `vlc_users` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT primary key,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
+  `sname` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
+  `nick` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
+  `nickname` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
+  `passwd` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL DEFAULT 'klubovna',
+  `mail` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
+  `platnost` int(11) NOT NULL DEFAULT '0',
+  `etapa` int(11) NOT NULL DEFAULT '0',
+  `aktivni` int(11) NOT NULL DEFAULT '1',
+  `kuchar` int(11) NOT NULL DEFAULT '0',
+  FULLTEXT KEY `heslo` (`passwd`)
+);
+
+
+
+
+INSERT INTO `vlc_users` (`ID`, `name`, `sname`, `nick`, `nickname`, `passwd`, `mail`, `platnost`, `etapa`, `aktivni`, `kuchar`) VALUES
+(1, 'Vojtěch', 'Stuchlík', 'krtek', 'Krtek', 'sauron', 'krtek@zlin6.cz', 1, 0, 1, 0),
+(2, 'Vojtěch', 'Jurák', 'broskev', 'Broskev', 'klubovna', 'broskev@zlin6.cz', 1, 0, 1, 0),
+(3, 'Jan', 'Fojtů', 'jena', 'Jeňa', 'klubovna', 'jena@zlin6.cz', 1, 0, 1, 0),
+(4, 'Jakub', 'Doležel', 'rony', 'Rony', 'klubovna', 'rony@zlin6.cz', 1, 0, 1, 0),
+(5, 'Vojtěch', 'Bernátek', 'nemo', 'Nemo', 'klubovna', 'nemo@zlin6.cz', 1, 1, 1, 0),
+(6, 'Martin', 'Salák', 'salo', 'Salo', 'klubovna', 'salo@zlin6.cz', 1, 1, 1, 0),
+(7, 'František', 'Chvatík', 'tazi', 'Tazi', 'klubovna', 'taz@zlin6.cz', 1, 0, 1, 0),
+(8, 'Jakub', 'Fojtů', 'kuba', 'Kubík', 'klubovna', 'jacob.fojtu@gmail.com', 1, 0, 1, 0),
+(9, 'Dominik', 'Koutný', 'cmelda', 'Čmelda', 'klubovna', 'cmelda@zlin6.cz', 1, 1, 1, 0),
+(10, 'Martin', 'Šrajer', 'martin', 'Bagris', 'klubovna', 'martins@zlin6.cz', 1, 0, 1, 0),
+(11, 'Jiří', 'Mahdalík', 'jirka', 'Jirka', 'klubovna', 'jirka@zlin6.cz', 1, 0, 1, 0),
+(12, 'Matěj', 'Komínek', 'matej', 'Matěj', 'klubovna', 'matej@zlin6.cz', 1, 1, 1, 0),
+(13, 'Lukáš', 'Klinkovský', 'logen', 'Logen', 'klubovna', 'logen@zlin6.cz', 1, 0, 1, 0),
+(14, 'David', 'Hrubý', 'dale', 'Dale', 'klubovna', 'dale@zlin6.cz', 1, 0, 1, 0),
+(15, 'Martin', 'Vítek', 'mac', 'Mac', 'klubovna', 'mac@zlin6.cz', 1, 1, 1, 0),
+(16, 'Zdeněk', 'Hrabčík', 'zdena', 'Zdeňa', 'klubovna', 'zdena@zlin6.cz', 1, 0, 1, 0),
+(17, 'Dominik', 'Caha', 'dominik', 'Cahy', 'klubovna', 'cahy@zlin6.cz', 1, 0, 1, 0),
+(18, 'Jiří', 'Polášek', 'holub', 'Holub', 'klubovna', 'holub@zlin6.cz', 0, 0, 0, 0),
+(19, 'Marek', 'Bobál', 'mara', 'Mára', 'klubovna', 'mara@zlin6.cz', 0, 0, 1, 0),
+(20, 'Jan', 'Nevřivý', 'johny', 'Johny', 'klubovna', 'johny@zlin6.cz', 0, 0, 1, 0),
+(21, 'Jana', 'Harníková', 'jana', 'Jana', 'klubovna', 'harnikovaj@gmail.com', 1, 0, 0, 1),
+(22, 'Leoš', 'Hrdlička', 'leos', 'Leoš', 'klubovna', 'leos@zlin6.cz', 1, 0, 0, 1),
+(23, 'Adam', 'Náplava', 'adam', 'Adam', 'klubovna', 'adamnaplava@gmail.com', 1, 0, 1, 0),
+(24, 'Jan', 'Sedláček', 'sedlo', 'Sedlo', 'klubovna', 'sedlo@zlin6.cz', 0, 0, 0, 0),
+(25, 'Libor', 'Tichý', 'libor', 'Libor', 'klubovna', 'libor@zlin6.cz', 0, 0, 1, 0),
+(27, 'Klára', 'Lišková', 'klara', 'Klára', 'klubovna', '', 0, 0, 0, 1),
+(28, 'Karolína', 'Lišková', 'kaja', 'Kája', 'klubovna', '', 0, 0, 0, 1),
+(29, 'Tomáš', 'Trojan', 'tomas', 'Tomáš', 'klubovna', '', 0, 0, 0, 1),
+(30, 'Anna', 'Sidlerová', 'ance', 'Anče', 'klubovna', '', 0, 0, 0, 1),
+(31, 'Magdalena', 'Norova', 'magda', 'Magda', 'klubovna', 'manicka.norova@seznam.cz', 1, 0, 0, 1),
+(32, 'Barbora', 'Ženožičková', 'zena', 'Žena', 'klubovna', 'barbora.zenozickova@seznam.cz', 1, 0, 0, 1);

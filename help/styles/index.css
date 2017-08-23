@@ -1,0 +1,210 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+	font-family:Verdana, Geneva, sans-serif;
+}
+#login{
+	position:absolute;
+	top:-50%;
+	left:50%;
+	width:20em;
+	height:10em;
+	margin-left:-10em;
+	margin-top:-5em;
+	border:solid 4px green;
+	background-color:#FFFFC6;
+}
+#login2{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:30em;
+	height:10em;
+	margin-left:-10em;
+	margin-top:-5em;
+	border:solid 4px green;
+	background-color:#FFFFC6;
+}
+#login form{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:14em;
+	height:4em;
+	margin-left:-7em;
+	margin-top:-2.3em;
+	border:solid black 0px;
+}
+#login form tr{
+	line-height:2;
+}
+#login form td label{
+	font-size:12px;
+}
+#login form td a{
+	font-size:9px;
+	padding-left:
+	15px;
+}
+#login form td input{
+	font-family:"Courier New",
+	Courier, monospace;
+	max-width:10em;
+}
+
+#menicko{
+	position:absolute;
+	top:6vh;
+	left:91vw;
+	/*border:solid black 3px;*/
+	margin-right:13px;
+}
+#menicko > *{
+	margin-bottom:5px;
+}
+#syslog{
+	cursor:pointer;
+}
+#comments{
+	cursor:pointer;
+}
+#logout{
+	cursor:pointer;
+}
+#change_nick{
+	cursor:pointer;
+}
+
+#ChangeNickForm{
+	position:absolute;
+	top:8vh;
+	left:38vw;
+	background-color:black;
+	color:white;
+	padding:20px;
+}
+
+label{
+	margig-bottom: 5px;
+}
+ul{
+	margin: 20px 0 0 70px;
+}
+
+a{
+	text-decoration:none;
+}
+#menu{
+	width:80vw;
+	margin:auto;
+	min-height:70vh;
+}
+#inventar{
+	width:100%;
+	border:solid 3px #000012;
+	background-color:#09F;
+	text-align:center;
+	padding:40px 0 40px 0;
+	margin:40px 0 40px 0;
+	cursor:pointer;
+}
+#inventar{
+	color:#c0d180;
+	text-transform:uppercase;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:40px;
+}
+#inventar:hover{
+	color:#F0CFF6;
+}
+
+.tabor_rok{
+	width:29%;
+	border:solid 3px #036;
+	background-color:#FC3;
+	text-align:center;
+	padding:40px 0 40px 0;
+	margin: 0 1.5% 40px 1.5%;
+	float:left;
+	cursor:pointer;
+}
+.tabor_rok{
+	color:#036;
+	text-transform:uppercase;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:25px;
+}
+
+h1{
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-align:center;
+	margin: 1vh 0 2vh 0;
+}
+
+#activation{
+	text-align:center;
+	margin-top:3.5em;
+}
+#back{
+	float:right;
+	margin: 3px 3px 0 0;
+}
+#back a{
+	font-size:12px;
+	text-decoration:none;
+	color:black;
+}
+#sendmail{
+	margin:2em 0 0 5em;
+}
+#smail{
+	max-width:200px;
+}
+#tabor{
+	text-align:center;
+	color:red;
+}
+#comments button, #syslog button, #logout button{
+	cursor:pointer;
+}
+
+.red{
+	font-weight:bold;
+	color:red;
+}
+#megawin{
+	position:absolute;
+	top:0;
+	laft:0;
+	width:100%;
+	height:100%;
+	background-color:black;
+	color:white;
+	text-align:center;
+	line-height:17vh;
+	font-size:6vh;
+	cursor:pointer;
+}
+
+
+div#makeCamp{
+	position:absolute;
+	left:50%;
+	bottom:0;
+	transform: translate(-50%, -10px);
+}
+
+#back_img{
+	background:url('../img/profil.png');
+	display:block;
+	width:55px;
+	height:50px;
+	border:solid #0CF 1px;
+}
+#back_img:hover{
+	border:solid black 1px;
+	cursor:pointer;
+}

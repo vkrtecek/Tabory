@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+#modifyDayCook{ position:absolute; top:2vh; left:5vw; max-width:12vw; min-width:180px;}
+#jidelnicek{
+	margin:auto;
+	margin-top:80px;
+	max-width:92%;
+}
+#jidelnicek table{
+	border:solid black 3px;
+}
+#jidelnicek tr:hover{ background-color:#DAC; }
+#jidelnicek th{ padding:7px; text-align:center; background-color:#A8A8A8;}
+#jidelnicek td{ padding:5px; text-align:left;}
+#jidelnicek td.centr{ padding:7px; text-align:center; font-weight:bold;}
+.prvniTyden{ background-color:#0FC; }
+.druhyTyden{ background-color:#FFA; }
+.date{ border-right:solid black 3px;}
+.pozn{
+	border-left:solid black 3px;
+}
+td.pozn div{
+	height:80px;
+	overflow-y:scroll;
+	overflow-style:marquee-line
+}
+
+#legenda{ margin-top:3px; border:solid black 2px; }
+#legenda td, #pomoc th{ padding:6px; }
+
+#span_nap{ position:absolute; top:3vh; left:680px; padding:2px; border:solid red 2px; cursor:alias;}
+#napoveda{ position:absolute; border:solid blue 4px; background-color:black; color:white; padding: 10px; top:1em; left:300px; }
+#napoveda td{ font-size:14px; font-family:"Courier New", Courier, monospace;}
+
+h1.cook{ text-align:center; font-family:Verdana, Geneva, sans-serif; font-size:18px; }
+#addDayCook{ position:relative; top:2vh; left:2vw; }
+#div_addCook{ width:30wv; max-width:400px; margin: 5vh 0 0 5vw; }
+
+table.addDayTableCook td{ text-align:left; padding:0 10px 10px 0; }
+#nahledCook{ position:absolute; top:30vh; left:40vw; border:solid black 3px; text-align:center; }
+#nahledCook td, #nahled th{ padding:6px; }
+#nahledCook th{ background-color:#CCC; }
+
+hr.cook{ clear:both; margin:20px 0 20px 0;}

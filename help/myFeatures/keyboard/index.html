@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="author" content="Vojtěch Stuchlík" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+				font-family: sans-serif;
+				text-align: center;
+			}
+			td{
+				padding: 1px 5px 1px 5px;
+				width:2rem;
+				height:2rem;
+			}
+			table{
+				border:solid black 3px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate( -50%, -50% );
+			}
+			h1{
+				margin-top: 2rem;
+			}
+			p{
+				margin-top: 0.6rem;
+			}
+			div{
+				margin: auto;
+				margin-top: 3rem;
+			}
+			div#clear{
+				background-color: #bbb;
+				display: inline-block;
+				margin-top: 1.2rem;
+				padding: 1px 3px 1px 3px;
+				border:solid 1px #222;
+				border-radius: 8%;
+				cursor:pointer;
+			}
+			div#clear:hover{
+				background-color: #999;
+			}
+			div#clear:active{
+				margin-top:1.3rem;
+				border-color: red;
+			}
+			textarea#textarea{
+				position: absolute;
+				top: 65%;
+				height: 30%;
+				left: 10%;
+				width:80%;
+			}
+		</style>
+
+	<title>Keyboard</title>
+
+	</head>
+	<body>
+		<h1>Lighting keyboard</h1>
+		<p>Press any key</p>
+		<div>Key ID: <span id="testID">0</span></div>
+		<table rules="all">
+			<tr>
+				<td class="27">Esc</td>
+				<td class="112">F1</td>
+				<td class="113">F2</td>
+				<td class="114">F3</td>
+				<td class="115">F4</td>
+				<td class="116">F5</td>
+				<td class="117">F6</td>
+				<td class="118">F7</td>
+				<td class="119">F8</td>
+				<td class="120">F9</td>
+				<td class="121">F10</td>
+				<td class="122">F11</td>
+				<td class="123">F12</td>
+				<td class="">PrtScr</td>
+				<td class="145">ScrLck</td>
+				<td class="19">Break</td>
+				<td></td>
+				<td class="45">Insert</td>
+				<td class="46">Delete</td>
+				<td class="33">PgUP</td>
+				<td class="34">PgDn</td>
+			</tr>
+			<tr>
+				<td class="192">;</td>
+				<td class="49">+</td>
+				<td class="50">Ě</td>
+				<td class="51">Š</td>
+				<td class="52">Č</td>
+				<td class="53">Ř</td>
+				<td class="54">Ž</td>
+				<td class="55">Ý</td>
+				<td class="56">Á</td>
+				<td class="57">Í</td>
+				<td class="48">É</td>
+				<td class="187">=</td>
+				<td class="191">´</td>
+				<td class="8" colspan="3">BkSpc</td>
+				<td></td>
+				<td class="144">NmLck</td>
+				<td class="111">/</td>
+				<td class="106">*</td>
+				<td class="109">-</td>
+			</tr>
+			<tr>
+				<td class="9" colspan="2">Tab</td>
+				<td class="81">Q</td>
+				<td class="87">W</td>
+				<td class="69">E</td>
+				<td class="82">R</td>
+				<td class="84">T</td>
+				<td class="90">Z</td>
+				<td class="85">U</td>
+				<td class="73">I</td>
+				<td class="79">O</td>
+				<td class="80">P</td>
+				<td class="219">Ú</td>
+				<td class="221">)</td>
+				<td class="220" colspan="2">¨ ' ¤</td>
+				<td></td>
+				<td class="103">7</td>
+				<td class="104">8</td>
+				<td class="105">9</td>
+				<td class="107" rowspan="2">+</td>
+			</tr>
+			<tr>
+				<td class="20" colspan="2">CpLck</td>
+				<td class="65">A</td>
+				<td class="83">S</td>
+				<td class="68">D</td>
+				<td class="70">F</td>
+				<td class="71">G</td>
+				<td class="72">H</td>
+				<td class="74">J</td>
+				<td class="75">K</td>
+				<td class="76">L</td>
+				<td class="186">Ů</td>
+				<td class="222">§</td>
+				<td class="13" colspan="3">Enter</td>
+				<td></td>
+				<td class="100">4</td>
+				<td class="101">5</td>
+				<td class="102	">6</td>
+			</tr>
+			<tr>
+				<td class="16" colspan="3">Shift</td>
+				<td class="89">Y</td>
+				<td class="88">X</td>
+				<td class="67">C</td>
+				<td class="86">V</td>
+				<td class="66">B</td>
+				<td class="78">N</td>
+				<td class="77">M</td>
+				<td class="188">,</td>
+				<td class="190">.</td>
+				<td class="189">-</td>
+				<td class="16" colspan="2">Shift</td>
+				<td class="38">&#8593;</td>
+				<td></td>
+				<td class="97">1</td>
+				<td class="98">2</td>
+				<td class="99">3</td>
+				<td class="13" rowspan="2">Enter</td>
+			</tr>
+			<tr>
+				<td class="17">Ctrl</td>
+				<td class="">Fn</td>
+				<td class="18">Alt</td>
+				<td class="32" colspan="7">Space</td>
+				<td class="226">\</td>
+				<td class="18">AltGr</td>
+				<td class="91">WIN</td>
+				<td class="17">Ctrl</td>
+				<td class="37">&#8592;</td>
+				<td class="40">&#8595;</td>
+				<td></td>
+				<td class="39">&#8594;</td>
+				<td class="96">0</td>
+				<td class="110">,</td>
+			</tr>
+		</table>
+		
+		<div onClick="clearBG()" id="clear">Clear history</div>
+		
+		<textarea id="textarea" disabled></textarea>
+		
+		<script type="text/javascript">
+			$(document).keydown(function(e){
+				var add = e.keyCode;
+				if ( add == 37 ) add = '&#8592;';
+				else if ( add == 38 ) add = '&#8593;';
+				else if ( add == 39 ) add = '&#8594;';
+				else if ( add == 40 ) add = '&#8595;';
+				else add = String.fromCharCode( e.keyCode );
+				
+				document.getElementById( 'textarea' ).innerHTML += add;
+				if ( e.keyCode == 8 ) {
+					var str = document.getElementById( 'textarea' ).innerHTML;
+					document.getElementById( 'textarea' ).innerHTML = str.substr( 0, str.length-2 );
+				}
+				document.getElementById( 'testID' ).innerHTML = event.keyCode;
+				
+				var keys = document.getElementsByClassName( event.keyCode );
+				for ( var i = 0; i < keys.length; i++ ) {
+					keys[i].style.backgroundColor = 'green';
+				}
+			});
+			$(document).keyup(function(e){
+				//var event = window.Event ? window.Event : e;
+				var keys = document.getElementsByClassName( event.keyCode );
+				for ( var i = 0; i < keys.length; i++ ) {
+					keys[i].style.backgroundColor = 'yellow';
+				}
+			});
+			function clearBG() {
+				var MY_MAX_OF_KEY_ID = 300;
+				var tmp;
+				
+				for ( var i = 1; i <= MY_MAX_OF_KEY_ID; i++ ) {
+					tmp = document.getElementsByClassName( i );
+					for ( var l = 0; l < tmp.length; l++ ) {
+						tmp[l].style.backgroundColor = 'white';
+					}
+				}
+				
+				document.getElementById( 'testID' ).innerHTML = '0';
+				document.getElementById( 'textarea' ).innerHTML = '';
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+button.taskbutton{
+	padding: 0 2px 0 2px;
+}
+#form{
+	margin:2em 0 0 3em;
+}
+#tasks{
+	margin:2em 10em 0 3em;
+	padding:1rem;
+	border:dashed 0.3em red;
+}
+div#tasks h2{
+	font-size:200%;
+	margin-bottom:1.3rem;
+}
+.table_tasks{
+	border:solid 2px black;
+	background-color:#CCC;
+	opacity:0.7;
+	margin-bottom:0.6rem;
+}
+.table_tasks *{
+	padding: 1px 5px 1px 5px;
+}
+.etapa{background-color:#FE9CAB; color:#AB0325;}
+.funkce{
+	background-color:#0CF;
+	color:#900;
+}
+.zaridit{
+	background-color:#00F;
+	color:#FC3;
+}
+
+
+#addTask{
+	margin:2em 10em 0 3em;
+	padding:1rem;
+	border: dotted 0.1em blue;
+}
+div#addTask h3{
+	font-size:130%;
+	margin-bottom:1.3rem;
+}
+#add_task > *{
+	margin-bottom:0.6em;
+}

@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* CSS Document */
+
+div#members{
+	margin:5vh 0 0 70px;
+	padding:7px;
+	border:solid black 2px;
+	height:83vh;
+	max-width:220px;
+	overflow-y:scroll;
+}
+div#members li, div#allMembers li, div#nowMembers li{
+	font-size:150%;
+	list-style-type:none;
+	background-color:#FFC;
+	text-align:center;
+	padding:2px;
+	border-bottom:red 1px solid;
+}
+
+div.card{
+	position:absolute;
+	top:6vh;
+	left:400px;
+	border:solid black 2px;
+	min-width:200px;
+	min-height:150px;
+	background-color:#FECF89;
+	padding:10px;
+}
+div.card img{
+	float:left;
+	margin-right:15px;
+}
+div.card td{
+	padding-right:15px;
+}
+
+
+
+
+div#underMembers{
+	border:solid black 2px;
+	position:absolute;
+	top:90vh;
+	left:70px;
+	width:234px;
+	height:40px;
+}
+div#underMembers button{
+	width:100%;
+	height:100%;
+	cursor:pointer;
+}
+
+#navigate{
+	margin:2vh 0 0 2vw;
+	display:inline;
+}
+#navigate > *{
+	font-size:150%;
+	padding:6px;
+	cursor:pointer;
+}
+
+
+div#herePlace{
+	position:absolute;
+	top:125px;
+	left:78px;
+	padding:20px;
+	background-color:#BBFFF1;
+}
+div#herePlace input, div#herePlace textarea{
+	margin-bottom:6px;
+	margin-left:10px;
+}
+
+
+p#info{
+	position:absolute;
+	top:125px;
+	left:78px;
+	padding:20px;
+	background-color:#BBFFF1;
+}
+p#info span{
+	text-decoration:underline;
+	cursor:pointer;
+}
+div#allMembers, div#nowMembers{
+	position:absolute;
+	top:10vh;
+	padding:7px;
+	border:solid black 2px;
+	height:83vh;
+	width:320px;
+	max-width:320px;
+	overflow-y:scroll;
+	background-color:#0CF;
+}
+div#allMembers{
+	left:9vw;
+}
+div#nowMembers{
+	right:9vw;
+}
+
+div#aboveNow, div#aboveAll{
+	position:absolute;
+	top:5vh;
+	border:solid black 2px;
+	width:334px;
+	text-align:center;
+	font-size:200%;
+	font-weight:bold;
+	line-height:4vh;
+	background-color:#FF9;
+}
+div#aboveNow{
+	right:9vw;
+}
+div#aboveAll{
+	left:9vw;
+}
+#nowMembers li > img{
+	border:solid black 1px;
+	cursor:pointer;
+	float:left;
+}
+#allMembers li > img{
+	border:solid black 1px;
+	cursor:pointer;
+	float:right;
+}
+
+
+#search{
+	margin-top:4vh;
+	margin-bottom:-3vh;
+	margin-left:2vw;
+}
+#pattern{
+	max-width:80px;
+}
+div#placeToFormUpdate{
+	position:absolute;
+	top:15vh;
+	left:350px;
+	min-width:40vw;
+	border:solid black 2px;
+	text-align:center;
+	background-color:#6FC;
+}
+div#placeToFormUpdate form{
+	margin:30px;
+}
+div#placeToFormUpdate form td{
+	padding-bottom:6px;
+}
+div#placeToPhotoOfMem{
+	border:solid black 2px;
+	width:120px;
+	margin:auto;
+}

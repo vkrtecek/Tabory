@@ -1,0 +1,8 @@
+*.xml
+*.png
+*.jpg
+*.ico
+*.doc*
+*.xsl*
+*.pdf
+/utrata

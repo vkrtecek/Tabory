@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0;}
+p{font-family:calibri, verdana, sans-serif; text-align:center; font-size:25px; text-decoration:none; color:black;}
+h1{ margin:5px 0 10px 0; font-family:calibri, verdana, sans-serif; text-align:center; font-size:50px;}
+body{background-image:url(../veci/pozadi2.jpg); background-repeat:no-repeat}
+div{margin:15px 0 15px 5px; display:block; width:450px; background-color:white; opacity:0.7;}
+div:hover{ margin-left:50px}

@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0; font-family:calibri, verdana, sans-serif;}
+td, th{ font-family:"Times New Roman", Times, serif; text-align:center; border:grey 1px solid; font-size:25px; padding:0 10px 0 10px;}
+th{font-family:calibri, verdana, sans-serif;}
+tr.normal td:last-child { background-color:#FF0;}
+tr:nth-child(even){ background-color:#67d332;}
+tr#hlavni:hover{background-color:white;}
+tr.zmena:hover{background-color:grey; color:white;}
+
+table{margin: 20px 0 0 30px; padding:3px; border: grey solid 5px;}

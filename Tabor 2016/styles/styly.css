@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0; padding:0; font-family:Verdana, Geneva, sans-serif; font-size:12px; }
+body::after{
+	content: "";
+	background: url('background.jpg') no-repeat;
+	background-attachment: fixed;
+	opacity: 0.25;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position:fixed;
+	z-index: -1;  
+	padding:20px;
+	background-color: rgba(0, 0, 0, 1);
+	width:100%;
+	height:100%;
+	background-size:100%;
+}
+#form_back{
+	position:fixed;
+	float:right;
+	right:1rem;
+	top:3px;
+}
+#back{
+	background:url('../../home.jpeg') no-repeat;
+	display:block;
+	width:40px;
+	height:40px;
+	border:solid #0CF 1px;
+}
+button#back:hover{
+	border-color:black;
+	cursor:pointer;
+}
+#menu_blue{
+	font-family:"Courier New", Courier, monospace;
+	background-color:blue;
+	float:right;
+	color:white;
+	font-weight:bold;
+	width:2rem;
+	padding:1px;
+	text-align:center;
+}
+#menu_blue:hover{
+	cursor:pointer;
+}
+#menu_red{
+	max-width:300px;
+	float:right;
+	clear:left;
+}
+#menu_red::after{
+	content: "";
+	background:#FF9;
+	background-attachment: fixed;
+	opacity: 0.4;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position:fixed;
+	z-index: -1;  
+	padding:20px;
+	background-color: rgba(0, 0, 0, 1);
+	width:100%;
+	height:100%;
+	background-size:100%;
+}
+#menu_red > #table_menu tr{
+	float:right;
+	clear:right;
+}
+#menu_red > #table_menu td{
+	min-width:100px;
+}
+#table_menu{
+	border:none;
+}
+.menu{
+	text-decoration:none;
+	background:#FF0080;
+	color:white;
+	padding:4px;
+	text-transform:uppercase;
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:15px;
+}
+.menu:hover, .menu_modre:hover, .menu_dalsi:hover{
+	color:blue;
+}
+.menu_modre{
+	text-decoration:none;
+	background:#C3C;
+	color:white;
+	padding:4px;
+	text-transform:lowercase;
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+}
+.menu_dalsi{
+	text-decoration:none;
+	background:#F6F;
+	color:white;
+	padding:4px;
+	text-transform:uppercase;
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:15px;
+}
+td.odsadit{
+	min-width:3vw;
+}
+.div_menu{
+	position:fixed;
+	right:1%;
+	top:50px;
+	max-width:30vw;
+	/*border:solid 3px black;*/
+}
+
+
+#bottom{
+	position:absolute;
+	left:50%;
+	bottom:0;
+	transform: translate(-50%, -10px);
+}

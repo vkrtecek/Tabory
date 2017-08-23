@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	font-family:Tahoma, Geneva, sans-serif;
+	order:solid 1px red;
+}
+h1{
+	text-align:center;
+}
+h2{
+	margin-bottom:.9rem;
+}
+div#aroundPic > h3{
+	color:white;
+	text-align:center;
+	text-transform:uppercase;
+	margin-top:0.3rem;
+}
+div#photos{
+	margin:auto;
+	text-align:center;
+	margin-top:2rem;
+}
+div.photoLine{
+	margin-top:1.3rem;
+	margin-bottom:1.3rem;
+}
+div.photoLine > img{
+	cursor:pointer;
+	margin-right:1rem;
+	margin-bottom:0.6rem;
+}
+hr{
+	border:dashed black 1px;
+}
+div#herePhotoShow{
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+
+
+div#photoViewer{
+	width:100vw;
+	height:100vh;	
+}
+div#aroundPic{
+	position:absolute;
+	top:50%;
+	left:0;
+	width:100%;
+	transform:translate( 0, -50% );
+	background-color:black;
+}
+div#aroundPic > img{
+	transform:translateX( 0 );
+	margin: 1rem 0 1rem 0;
+	width:60vw;
+}
+div#aroundPic > p{
+	color:white;
+	text-align:center;
+	margin-bottom:0.6rem;
+}
+
+div#bySideImgLeft, div#bySideImgRight{
+	border:solid transparent 1px;
+	display:inline-block;
+	border:solid red 1px;
+	width:18vw;
+}
+div#bySideImgLeft img, div#bySideImgRight img{
+	margin-top:100%;
+	width:25%;
+}
+div#bySideImgLeft img{
+	float:right;
+}
+div#bySideImgRight img{
+	float:left;
+}
+img.toAnotherPic:hover {
+	cursor:pointer;
+}
