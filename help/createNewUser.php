@@ -25,6 +25,7 @@ if ( !isset($_REQUEST['insert']) )
         <tr><td><label for="passwd">Heslo</label></td><td><input type="text" id="passwd"/></td></tr>
         <tr><td><label for="mail">E-mail</label></td><td><input type="text" id="mail"/></td></tr>
         <tr><td><label for="telefon">Telefon</label></td><td><input type="text" id="telefon"/> Nepovinné</td></tr>
+        <tr><td><label for="birthdate">Datum narození</label></td><td><input type="date" id="birthdate"/> Nepovinné</td></tr>
         <tr>
             <td>
                 <label for="platnost">Platnost účtu</label>
@@ -96,9 +97,9 @@ function mailOK( email )
 	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
-function insertPerson( name, sname, nick, nickname, passwd, mail, platnost, aktivni, etapa, kuchar, admin, telefon )
+function insertPerson( name, sname, nick, nickname, passwd, mail, platnost, aktivni, etapa, kuchar, admin, telefon, birthdate )
 {
-	document.getElementById( 'div_create_new_user' ).innerHTML = "INSERT INTO vlc_users ( name, sname, nick, nickname, passwd, mail, platnost, etapa, aktivni, kuchar, admin, telefon ) VALUES ( '"+name+"', '"+sname+"', '"+nick+"', '"+nickname+"', '"+passwd+"', '"+mail+"', '"+platnost+"', '"+etapa+"', '"+aktivni+"', '"+kuchar+"', '"+admin+"', '"+telefon+"' );";
+	document.getElementById( 'div_create_new_user' ).innerHTML = "INSERT INTO vlc_users ( name, sname, nick, nickname, passwd, mail, platnost, etapa, aktivni, kuchar, admin, telefon ) VALUES ( '"+name+"', '"+sname+"', '"+nick+"', '"+nickname+"', '"+passwd+"', '"+mail+"', '"+platnost+"', '"+etapa+"', '"+aktivni+"', '"+kuchar+"', '"+admin+"', '"+telefon+"', '"+birthdate+"' );";
 	
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function()
@@ -110,7 +111,7 @@ function insertPerson( name, sname, nick, nickname, passwd, mail, platnost, akti
 	};
 	xmlhttp.open( "POST", "scripty/createNewUser.php", true );
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xmlhttp.send( "name="+name+"&sname="+sname+"&nick="+nick+"&nickname="+nickname+"&passwd="+passwd+"&mail="+mail+"&platnost="+platnost+"&etapa="+etapa+"&aktivni="+aktivni+"&kuchar="+kuchar+"&admin="+admin+"&telefon="+telefon );
+	xmlhttp.send( "name="+name+"&sname="+sname+"&nick="+nick+"&nickname="+nickname+"&passwd="+passwd+"&mail="+mail+"&birthdate="+birthdate+"&platnost="+platnost+"&etapa="+etapa+"&aktivni="+aktivni+"&kuchar="+kuchar+"&admin="+admin+"&telefon="+telefon );
 }
 function check()
 {
@@ -126,6 +127,7 @@ function check()
 	var kuchar = document.getElementById( 'kuchar' ).value;
 	var admin = document.getElementById( 'admin' ).value;
 	var telefon = document.getElementById( 'telefon' ).value;
+	var birthdate = document.getElementById( 'birthdate' ).value;
 	
 	
 	if ( name == '' || sname == '' || nick == '' || nickname == '' || passwd == '' || mail == '' )
@@ -150,7 +152,7 @@ function check()
 		{
 			if ( xmlhttp.responseText == 'true' )
 			{
-				insertPerson( name, sname, nick, nickname, passwd, mail, platnost, aktivni, etapa, kuchar, admin, telefon );
+				insertPerson( name, sname, nick, nickname, passwd, mail, platnost, aktivni, etapa, kuchar, admin, telefon, birthdate );
 			}
 			else alert( 'Takové přihlašovací jméno již existuje' );
 		}

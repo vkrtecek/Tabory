@@ -129,7 +129,11 @@ if ( file_exists( "../../promenne.php") && require( "../../promenne.php" ) )
 		</table>
 		</form>
     	<div id="placeToPhotoOfMem"><img src="../help/img/members/small/<?php echo $mem['photo']; ?>" alt="fotka člena" /></div>
-        <form method="post">                
+      
+      
+        <button class="blue" onclick="mvBoyToUses( <?=$_REQUEST['id'];?>, '<?=$_REQUEST['name'];?>' )">Přesunout do vedoucích</button>
+      
+        <form method="post" onsubmit="return confirm( 'Opravdu smazat?' )">                
             <input type="hidden" name="name" value="<?php echo $_REQUEST['name']; ?>" />
             <input type="hidden" name="passwd" value="<?php echo $_REQUEST['passwd']; ?>" />
 			<input type="hidden" name="id" value="<?php echo $_REQUEST['id']; ?>" />

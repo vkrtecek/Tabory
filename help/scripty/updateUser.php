@@ -41,7 +41,7 @@ else echo "<p>File $promenne doesn't exists.</p>";
 $table = $_REQUEST['table'];
 $id = $_REQUEST['id'];
 $col = $_REQUEST['col'];
-$val = $_REQUEST['val'] == 'null' ? 'NULL' : '"'.$_REQUEST['val'].'"';
+$val = strtolower($_REQUEST['val']) == 'null' ? 'NULL' : '"'.$_REQUEST['val'].'"';
 
 $statement = 'UPDATE '.$table.' SET '.$col.' = '.$val.' WHERE ID = '.$id;
 

@@ -18,6 +18,10 @@
     </select>
     <label for="pattern"> obsahujíc </label>
     <input id="pattern" type="text" name="pattern" />
+    <span>
+    	<input type="checkbox" id="active" />
+    	<label for="active">Neaktivní</label>
+    </span>
 
 </div>
 <div id="showMemToUpdate"></div>
@@ -162,7 +166,8 @@ function showFormUpdate( id, where )
 	xmlhttpForm.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttpForm.send( "id="+id+"&name=<?php echo $_REQUEST['name']; ?>&passwd=<?php echo $_REQUEST['passwd']; ?>" );
 }
-function showMems( order, orderBy, pattern, table )
+
+function showMems( order, orderBy, pattern, table, active )
 {
 	if (window.XMLHttpRequest) {
 		xmlhttpShow = new XMLHttpRequest();
@@ -176,7 +181,7 @@ function showMems( order, orderBy, pattern, table )
 	};
 	xmlhttpShow.open( "POST", "scripty/showAllMem.php", true );
 	xmlhttpShow.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xmlhttpShow.send( "order="+order+"&orderBy="+orderBy+"&pattern="+pattern+"&table="+table );
+	xmlhttpShow.send( "order="+order+"&orderBy="+orderBy+"&pattern="+pattern+"&table="+table+"&active="+active );
 }
 
 
@@ -190,19 +195,29 @@ $("#pattern").keyup(function(){
 	var order = document.getElementById( 'order' ).value;
 	var orderBy = document.getElementById( 'orderBy' ).value;
 	var pattern = document.getElementById( 'pattern' ).value;
-	showMems( order, orderBy, pattern, 'vlc_boys' );
+	var active = document.getElementById( 'active' ).checked;
+	showMems( order, orderBy, pattern, 'vlc_boys', active );
 });
 $("#order").change(function(){
 	var order = document.getElementById( 'order' ).value;
 	var orderBy = document.getElementById( 'orderBy' ).value;
 	var pattern = document.getElementById( 'pattern' ).value;
-	showMems( order, orderBy, pattern, 'vlc_boys' );
+	var active = document.getElementById( 'active' ).checked;
+	showMems( order, orderBy, pattern, 'vlc_boys', active );
 });
 $("#orderBy").change(function(){
 	var order = document.getElementById( 'order' ).value;
 	var orderBy = document.getElementById( 'orderBy' ).value;
 	var pattern = document.getElementById( 'pattern' ).value;
-	showMems( order, orderBy, pattern, 'vlc_boys' );
+	var active = document.getElementById( 'active' ).checked;
+	showMems( order, orderBy, pattern, 'vlc_boys', active );
+});
+$("#active").change(function(){
+	var order = document.getElementById( 'order' ).value;
+	var orderBy = document.getElementById( 'orderBy' ).value;
+	var pattern = document.getElementById( 'pattern' ).value;
+	var active = document.getElementById( 'active' ).checked;
+	showMems( order, orderBy, pattern, 'vlc_boys', active );
 });
 </script>
 <?php
