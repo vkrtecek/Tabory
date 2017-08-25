@@ -1,15 +1,16 @@
 @charset "utf-8";
 /* CSS Document */
 
-div#members{
+div#members, div#showMemToUpdate{
 	margin:5vh 0 0 70px;
 	padding:7px;
 	border:solid black 2px;
 	height:83vh;
 	max-width:220px;
 	overflow-y:scroll;
+	background-color:#09F;
 }
-div#members li, div#allMembers li, div#nowMembers li{
+div#members li, div#allMembers li, div#nowMembers li, div#showMemToUpdate li{
 	font-size:150%;
 	list-style-type:none;
 	background-color:#FFC;
@@ -133,7 +134,6 @@ div#aboveAll{
 	cursor:pointer;
 	float:right;
 }
-
 
 #search{
 	margin-top:4vh;

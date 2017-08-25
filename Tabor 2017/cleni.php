@@ -22,7 +22,7 @@ if ( file_exists( "../promenne.php") && require( "../promenne.php" ) )
 {
 	if ( ($spojeni = mysqli_connect( $db_host, $db_username, $db_password, $db_name )) && $spojeni->query( "SET CHARACTER SET UTF8" ) )
 	{
-		if ( isset($_REQUEST['BACK']) || (!isset($_REQUEST['EDIT']) && !isset($_REQUEST['ADD'])) )
+		if ( isset($_REQUEST['BACK']) || (!isset($_REQUEST['EDIT']) && !isset($_REQUEST['ADD']) && !isset($_REQUEST['EDIT_M'])) )
 		{
 			$cnt = 0;
 			$sql = $spojeni->query( "SELECT id FROM ".$tableNow );
@@ -71,13 +71,17 @@ if ( file_exists( "../promenne.php") && require( "../promenne.php" ) )
 			echo '</div>';
 			echo '</form>';
 		}
-		else if ( isset($_REQUEST['EDIT']) && !isset($_REQUEST['ADD']) && !isset($_REQUEST['BACK']) )
+		else if ( isset($_REQUEST['EDIT']) && !isset($_REQUEST['ADD']) && !isset($_REQUEST['BACK']) && !isset($_REQUEST['EDIT_M']) )
 		{
 			require( "cleni_edit.php" );
 		}
-		else if ( !isset($_REQUEST['EDIT']) && isset($_REQUEST['ADD']) && !isset($_REQUEST['BACK']) )
+		else if ( !isset($_REQUEST['EDIT']) && isset($_REQUEST['ADD']) && !isset($_REQUEST['BACK']) && !isset($_REQUEST['EDIT_M']) )
 		{
 			require( "cleni_add.php" );
+		}
+		else if ( !isset($_REQUEST['EDIT']) && !isset($_REQUEST['ADD']) && !isset($_REQUEST['BACK']) && isset($_REQUEST['EDIT_M']) )
+		{
+			require( "cleni_edit_concr.php" );
 		}
 	}
 	else echo '<p>Connection with database failed.</p>';
