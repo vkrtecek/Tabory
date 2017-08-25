@@ -11,3 +11,12 @@
 04. červenec 2017 | 23:46:54			Update user Salo (id=6) - admin -> "0"
 04. červenec 2017 | 23:49:35			Update user Dale (id=14) - aktivni -> "1"
 16. červenec 2017 | 15:06:26			Update user Jeňa (id=3) - admin -> "1"
+25. srpen 2017 | 17:22:13			Update user Krtek (id=1) - birthdate -> ""
+25. srpen 2017 | 17:23:12			Update user Krtek (id=1) - birthdate -> NULL
+25. srpen 2017 | 17:24:14			Update user Cahy (id=17) - telefon -> NULL
+25. srpen 2017 | 17:27:25			Created new user st
+25. srpen 2017 | 18:53:31			krtek just moved boy Filip Dleštík Sekáč into vlc_users as Vedoucí
+25. srpen 2017 | 18:54:19			krtek just moved boy Jan Genzer Kareta into vlc_users as Vedoucí
+25. srpen 2017 | 18:54:27			krtek just moved boy Filip Jakubíček Ječmen into vlc_users as Vedoucí
+25. srpen 2017 | 18:55:29			krtek just moved boy František Viktořík Hrášek into vlc_users as Vedoucí
+25. srpen 2017 | 19:01:37			krtek just moved boy František Kuna Gery into vlc_users as Vedoucí

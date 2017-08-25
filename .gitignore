@@ -6,3 +6,4 @@
 *.xsl*
 *.pdf
 /utrata
+/help/logs/*.txt
