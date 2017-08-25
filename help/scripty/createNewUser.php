@@ -1,6 +1,6 @@
 <?php
 $telefon = $_REQUEST['telefon'] == "NULL" || $_REQUEST['telefon'] == "" ? NULL : $_REQUEST['telefon'];
-$statement1 = "INSERT INTO vlc_users ( name, sname, nick, nickname, passwd, mail, platnost, etapa, aktivni, kuchar, admin, telefon ) VALUES ( '".$_REQUEST['name']."',  '".$_REQUEST['sname']."',  '".$_REQUEST['nick']."',  '".$_REQUEST['nickname']."', '".$_REQUEST['passwd']."', '".$_REQUEST['mail']."', ".$_REQUEST['platnost'].", ".$_REQUEST['etapa'].", ".$_REQUEST['aktivni'].", ".$_REQUEST['kuchar'].", ".$_REQUEST['admin'].", '".$telefon."' );";
+$statement1 = "INSERT INTO vlc_users ( name, sname, nick, nickname, passwd, mail, platnost, etapa, aktivni, kuchar, admin, telefon ) VALUES ( N'".$_REQUEST['name']."',  N'".$_REQUEST['sname']."',  N'".$_REQUEST['nick']."',  N'".$_REQUEST['nickname']."', N'".$_REQUEST['passwd']."', N'".$_REQUEST['mail']."', ".$_REQUEST['platnost'].", ".$_REQUEST['etapa'].", ".$_REQUEST['aktivni'].", ".$_REQUEST['kuchar'].", ".$_REQUEST['admin'].", '".$telefon."' );";
 //$statement2 = "INSERT INTO vlc_last_log ( nick, mail ) VALUES ( '".$_REQUEST['nick']."', '".$_REQUEST['mail']."' );";
 
 

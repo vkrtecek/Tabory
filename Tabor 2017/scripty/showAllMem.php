@@ -9,7 +9,7 @@ if ( file_exists( "../../promenne.php") && require( "../../promenne.php" ) )
 	if ( ($spojeni = mysqli_connect( $db_host, $db_username, $db_password, $db_name )) && $spojeni->query( "SET CHARACTER SET UTF8" ) )
 	{
 		$statement = "SELECT * FROM ".$table;
-		if ( $pattern != '' ) $statement .= " WHERE name LIKE '%".$pattern."%' OR sname LIKE '%".$pattern."%' OR nick LIKE '%".$pattern."%'";
+		if ( $pattern != '' ) $statement .= " WHERE name LIKE N'%".$pattern."%' OR sname LIKE N'%".$pattern."%' OR nick LIKE N'%".$pattern."%'";
 		$statement .= " ORDER BY ".$order." ".$orderBy;
 		$sql = $spojeni->query( $statement );
 		while ( $person = mysqli_fetch_array( $sql ) )

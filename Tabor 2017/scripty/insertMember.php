@@ -17,7 +17,7 @@ if ( file_exists( "../../promenne.php") && require( "../../promenne.php" ) )
 {
 	if ( ($spojeni = mysqli_connect( $db_host, $db_username, $db_password, $db_name )) && $spojeni->query( "SET CHARACTER SET UTF8" ) )
 	{
-		$statement = "INSERT INTO vlc_boys ( name, sname, nick, address, birthdate, photo, zdravi, telO, mailO, telM, mailM, RC ) VALUES ( '".$name."', '".$sname."', '".$nick."', '".$address."', '".$birthdate."', '".$photo."', '".$zdravi."', '".$telO."', '".$mailO."', '".$telM."', '".$mailM."', '".$RC."' )";
+		$statement = "INSERT INTO vlc_boys ( name, sname, nick, address, birthdate, photo, zdravi, telO, mailO, telM, mailM, RC ) VALUES ( N'".$name."', N'".$sname."', N'".$nick."', N'".$address."', '".$birthdate."', N'".$photo."', N'".$zdravi."', '".$telO."', N'".$mailO."', '".$telM."', N'".$mailM."', '".$RC."' )";
 		$spojeni->query( $statement );
 		echo $statement;
 	}
