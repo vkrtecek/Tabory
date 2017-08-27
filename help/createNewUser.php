@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Create new user</title>
 <link rel="stylesheet" type="text/css" href="styles/styly.css" />
+<script src="scripty/cleni.js" type="text/javascript"></script>
 </head>
 <body>
 <h1>Create new user</h1>
@@ -20,7 +21,7 @@ if ( !isset($_REQUEST['insert']) )
     <table rules="none">
         <tr><td><label for="name">Jméno </label></td><td><input type="text" id="name" /></td></tr>
         <tr><td><label for="sname">Příjmení </label></td><td><input type="text" id="sname"/></td></tr>
-        <tr><td><label for="nick">Přihlašovací jméno</label></td><td><input type="text" id="nick"/></td></tr>
+        <tr><td><label for="nick">Přihlašovací jméno</label></td><td><input type="text" id="nick" onkeyup="checkLogin( this, 'validLoginSpan' )" /> <strong id="validLoginSpan"></strong></td></tr>
         <tr><td><label for="nickname">Přezdívka</label></td><td><input type="text" id="nickname"/></td></tr>
         <tr><td><label for="passwd">Heslo</label></td><td><input type="text" id="passwd"/></td></tr>
         <tr><td><label for="mail">E-mail</label></td><td><input type="text" id="mail"/></td></tr>
@@ -128,8 +129,12 @@ function check()
 	var admin = document.getElementById( 'admin' ).value;
 	var telefon = document.getElementById( 'telefon' ).value;
 	var birthdate = document.getElementById( 'birthdate' ).value;
+	var validate = document.getElementById( 'validLoginSpan' ).innerHTML;
 	
-	
+	if ( validate != 'OK' ) {
+		alert( 'Login state must be "OK"' );
+		return false;
+	}
 	if ( name == '' || sname == '' || nick == '' || nickname == '' || passwd == '' || mail == '' )
 	{
 		alert( 'Něco není vyplněno' );
