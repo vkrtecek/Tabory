@@ -208,3 +208,9 @@ div#makeCamp{
 	border:solid black 1px;
 	cursor:pointer;
 }
+
+
+div#birthday {
+	margin:auto;
+	text-align:center;
+}

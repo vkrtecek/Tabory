@@ -30,13 +30,15 @@ function IDFromNick( $in, & $spojeni )
 
 function dateToReadableFormat( $date )
 {
-	if ( $date == '0' || $date == NULL) return $date;
+	if ( $date == '0' || $date == NULL) return '';
 	
-	list( $date, $time ) = explode( ' ', $date );
+	if ( count(explode(' ', $date)) == 2) list( $date, $time ) = explode( ' ', $date );
+	else if ( count(explode(' ', $date)) == 1 ) $time = NULL;
+	else return $date;
 	list( $year, $month, $day ) = explode( '-', $date );
 	$months = array( 'leden', 'únor', 'březen', 'duben', 'květen', 'červen', 'červenec', 'srpen', 'září', 'říjen', 'listopad', 'prosinec' );
 	$month = $month == '01' ? $months[0] : ( $month == '02' ? $months[1] : ( $month == '03' ? $months[2] : ( $month == '04' ? $months[3] : ( $month == '05' ? $months[4] : ( $month == '06' ? $months[5] : ( $month == '07' ? $months[6] : ( $month == '08' ? $months[7] : ( $month == '09' ? $months[8] : ( $month == '10' ? $months[9] : ( $month == '11' ? $months[10] : ( $months[11] )))))))))));
-	return $day.'. '.$month.' '.$year.' | '.$time;
+	return $day.'. '.$month.' '.$year.($time != NULL ? ' | '.$time : '');
 }
 
 function isAdmin( $name, & $spojeni )

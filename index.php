@@ -7,6 +7,7 @@ $headers = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
 <script src="getMyTime().js" type="text/javascript"></script>
 <script src="campDate.js" type="text/javascript"></script>
+<script src="help/scripty/dbConn.js" type="text/javascript"></script>
 <title>Tábory Vlčat</title>';
 
 $name = isset($_REQUEST['name']) ? $_REQUEST['name'] : "";
@@ -243,6 +244,7 @@ if ( $logged_failed && !isset($_REQUEST['ssend']) ) {
 			<button type="submit">Odhlásit</button>
 		</form> 
   </div>
+  <div id="birthday"></div>
     
     
     <div id="ChangeNickForm">                
@@ -404,6 +406,9 @@ $(".tabor_rok").mouseup(function(){
 	document.getElementById( "login2" ).style.borderColor = "red";';
 		if ( $bad_mail ) echo 'document.getElementById( "login" ).style.border = "solid red 1px";';
 	?>
+	$(document).ready(function(){
+		printBirthday( 'birthday' );
+	});
 </script>
 <noscript>
 	<h1>Pro tento web je nutné mít zapnutý javascript</h1>
