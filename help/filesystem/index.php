@@ -6,7 +6,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
 <script src="scripty/dbConn.js" type="text/javascript"></script>
 <script src="../help/scripty/harmonogram.js" type="text/javascript"></script>
-<script src="../help/scripty/harmonogram.js" type="text/javascript"></script>
+<script src="../help/scripty/cleni.js" type="text/javascript"></script>
 <script src="../relogin.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="styles/uvod.css" />
 <link rel="stylesheet" type="text/css" href="styles/harmonogram.css" />
@@ -21,6 +21,7 @@ if ( !isset($_REQUEST['name']) || !isset($_REQUEST['passwd']) ) {
 	?>
   <script>relogin( '<?= $_SERVER['REMOTE_ADDR']; ?>' );</script>
   <?php
+	//if ( file_exists('../relogin.php') && require('../relogin.php') ) relogin( $_SERVER['REMOTE_ADDR'], $_SERVER['PHP_SELF'], '..' );
 	echo '<h1><a href="../">Zřejmě jste se zapomněli přihlásit</a></h1>';
 }
 else {

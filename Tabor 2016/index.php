@@ -18,6 +18,7 @@ if ( !isset($_REQUEST['name']) || !isset($_REQUEST['passwd']) ) {
 	?>
   <script>relogin( '<?= $_SERVER['REMOTE_ADDR']; ?>' );</script>
   <?php
+	//if ( file_exists('../relogin.php') && require('../relogin.php') ) relogin( $_SERVER['REMOTE_ADDR'], $_SERVER['PHP_SELF'], '..' );
 	echo '<h1><a href="../">Zřejmě jste se zapomněli přihlásit</a></h1>';
 }
 else {

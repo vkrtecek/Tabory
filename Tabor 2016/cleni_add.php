@@ -80,12 +80,13 @@ if( isset($_FILES['photo']) )
             <td>
     			<input id="birthdate" type="date" name="birthdate" class="im" />
             </td>
-        </tr><tr>
+        </tr>
+        <tr>
         	<td>
     			<label for="RC">Rodné číslo: </label>
             </td>
             <td>
-    			<input id="RC" type="text" name="RC"/>
+    			<input id="RC" type="text" name="RC" />
             </td>
         </tr>
         <tr>
@@ -214,7 +215,6 @@ function isRC( RC )
 	return true;
 }
 
-
 function check()
 {
 	var important = document.getElementsByClassName( 'im' );
@@ -309,7 +309,7 @@ function check()
 	};
 	xmlhttp.open( "POST", "scripty/insertMember.php", true );
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xmlhttp.send( "name="+name+"&sname="+sname+"&nick="+nick+"&address="+address+"&birthdate="+birthdate+"&zdravi="+zdravi+"&telO="+telO+"&mailO="+mailO+"&telM="+telM+"&mailM="+mailM+"&photo="+photo+"&RC="+RC );
+	xmlhttp.send( "name="+name+"&sname="+sname+"&nick="+nick+"&address="+address+"&birthdate="+birthdate+"&zdravi="+zdravi+"&telO="+telO+"&mailO="+mailO+"&telM="+telM+"&mailM="+mailM+"&photo="+photo+"&RC="+RC+"&who=<?=$_REQUEST['name'];?>" );
 	return true;
 }
 

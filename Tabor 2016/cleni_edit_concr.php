@@ -233,10 +233,26 @@ $("#orderBy").change(function(){
 		$statement .= ", telO='".$_REQUEST['telO']."', mailO='".$_REQUEST['mailO']."', telM='".$_REQUEST['telM']."', mailM='".$_REQUEST['mailM']."'";
 		$statement .= " WHERE id = ".$_REQUEST['id'];
 		$spojeni->query( $statement );
+		
+		$log = $_REQUEST['name'].' just updated boy '.$_REQUEST['Dname'].' '.$_REQUEST['sname'].' ('.$_REQUEST['nick'].') where id='.$_REQUEST['id'];
+		$path = '..';
+		writeLog( $log, $path, 'vlc_boys.txt' );
 	}
 	else if ( isset($_REQUEST['delMem']) )
 	{
+		$st = 'select * from INFORMATION_SCHEMA.TABLES where TABLE_NAME like "d%_members"';
+		$sql = $spojeni->query( $st );
+		while ( $table = mysqli_fetch_array($sql, MYSQLI_ASSOC) ) {
+			$spojeni->query( "DELETE FROM ".$table['TABLE_NAME']." WHERE id=".$_REQUEST['id'] );
+		}
+		
+		$sql = $spojeni->query( "SELECT * FROM vlc_boys WHERE id=".$_REQUEST['id'] );
+		$boy = mysqli_fetch_array($sql, MYSQLI_ASSOC);
 		$statement = "DELETE FROM vlc_boys WHERE id = ".$_REQUEST['id'];
 		$spojeni->query( $statement );
+		
+		$log = $_REQUEST['name'].' just deleted boy '.$boy['name'].' '.$boy['sname'].' ('.$boy['nick'].')';
+		$path = '..';
+		writeLog( $log, $path, 'vlc_boys.txt' );
 	}
 ?>

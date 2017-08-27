@@ -94,7 +94,7 @@ function moveToCamp( id )
 	};
 	xmlhttpMTC.open( "POST", "scripty/moveToCamp.php", true );
 	xmlhttpMTC.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xmlhttpMTC.send( "id=" + id + "&tableNow=<?php echo $tableNow; ?>" );
+	xmlhttpMTC.send( "id=" + id + "&tableNow=<?php echo $tableNow; ?>&who=<?=$name;?>" );
 	
 	showBef( 'allMembers' );
 	showAf( 'nowMembers' );
@@ -108,7 +108,7 @@ function moveFromCamp( id )
 	}
 	xmlhttpMFC.open( "POST", "scripty/moveFromCamp.php", true );
 	xmlhttpMFC.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xmlhttpMFC.send( "id=" + id + "&tableNow=<?php echo $tableNow; ?>" );
+	xmlhttpMFC.send( "id=" + id + "&tableNow=<?php echo $tableNow; ?>&who=<?=$name;?>" );
 	
 	showBef( 'allMembers' );
 	showAf( 'nowMembers' );

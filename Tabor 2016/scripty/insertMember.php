@@ -11,6 +11,7 @@ $telM = $_REQUEST['telM'];
 $mailM = $_REQUEST['mailM'];
 $photo = $_REQUEST['photo'];
 $RC = $_REQUEST['RC'];
+$who = $_REQUEST['who'];
 
 
 if ( file_exists( "../../promenne.php") && require( "../../promenne.php" ) )
@@ -20,6 +21,10 @@ if ( file_exists( "../../promenne.php") && require( "../../promenne.php" ) )
 		$statement = "INSERT INTO vlc_boys ( name, sname, nick, address, birthdate, photo, zdravi, telO, mailO, telM, mailM, RC ) VALUES ( N'".$name."', N'".$sname."', N'".$nick."', N'".$address."', '".$birthdate."', N'".$photo."', N'".$zdravi."', '".$telO."', N'".$mailO."', '".$telM."', N'".$mailM."', '".$RC."' )";
 		$spojeni->query( $statement );
 		echo $statement;
+		
+		$log = $who.' just inserted boy '.$name.' '.$sname.' ('.$nick.')';
+		$path = '../..';
+		writeLog( $log, $path, 'vlc_boys.txt' );
 	}
 	else echo '<p>Connection with database failed.</p>';
 }

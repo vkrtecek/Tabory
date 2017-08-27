@@ -4,8 +4,8 @@ $out = array( 'a', 'e', 'i', 'y', 'o', 'u', 'u', 'c', 'd', 'e', 'n', 'r', 's', '
 $uploadDir = '../help/img/members';
 if( isset($_FILES['photo']) )
 {
-	$fileName = str_replace( $in, $out, $_REQUEST['Dname']).'_'.str_replace( $in, $out, $_REQUEST['sname']).'_'.str_replace( $in, $out, basename($_FILES['photo']['name']));
-	echo $fileName;
+	$ext = explode( '.', basename($_FILES['photo']['name']) );
+	$fileName = str_replace( $in, $out, $_REQUEST['Dname']).'_'.str_replace( $in, $out, $_REQUEST['sname']).'.'.$ext[count($ext)-1];
 	$tmpName = $_FILES['photo']['tmp_name'];
 
 	// presun souboru
@@ -86,7 +86,7 @@ if( isset($_FILES['photo']) )
     			<label for="RC">Rodné číslo: </label>
             </td>
             <td>
-    			<input id="RC" type="date" name="RC" class="im" />
+    			<input id="RC" type="text" name="RC" />
             </td>
         </tr>
         <tr>
@@ -291,10 +291,9 @@ function check()
 		var Mname = myReplace( inn, out, name );
 		var Msname = myReplace( inn, out, sname );
 		var Mphoto = myReplace( inn, out, photo );
+		Mphoto = Mphoto.split( '.' );
 		
-		photo = Mname + "_" + Msname + "_" + Mphoto;
-		alert( name + "_" + sname + "_" + photo + 
-		Mname + "_" + Msname + "_" + Mphoto );
+		photo = Mname + "_" + Msname + "." + Mphoto[ Mphoto.length-1 ];
 	}
 	
 	
@@ -310,7 +309,7 @@ function check()
 	};
 	xmlhttp.open( "POST", "scripty/insertMember.php", true );
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xmlhttp.send( "name="+name+"&sname="+sname+"&nick="+nick+"&address="+address+"&birthdate="+birthdate+"&zdravi="+zdravi+"&telO="+telO+"&mailO="+mailO+"&telM="+telM+"&mailM="+mailM+"&photo="+photo+"&RC="+RC );
+	xmlhttp.send( "name="+name+"&sname="+sname+"&nick="+nick+"&address="+address+"&birthdate="+birthdate+"&zdravi="+zdravi+"&telO="+telO+"&mailO="+mailO+"&telM="+telM+"&mailM="+mailM+"&photo="+photo+"&RC="+RC+"&who=<?=$_REQUEST['name'];?>" );
 	return true;
 }
 
