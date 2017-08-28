@@ -118,7 +118,7 @@ if ( $logged_failed && !isset($_REQUEST['ssend']) ) {
 <table rules="none">
     <tr><td><label>Nick: </td><td><input name="name" type="text" value="<?php echo $name;?>" id="focusHere"/></label></td></tr>
     <tr><td><label>Heslo: </td><td><input name="passwd" type="password" /></label></td></tr>
-    <tr><td><button type="submit" name="login_into_web">Přihlásit</button></td><td><a href="forgot_passwd.php" title="nechat si poslat heslo na mail">Zapomenuté heslo</a><br /><a href="change_passwd.php" title="umožňuje změnit si heslo">Změnit heslo</a></td></tr>
+    <tr><td><button type="submit" name="login_into_web">Přihlásit</button></td><td><a href="forgot_passwd.php" title="nechat si poslat heslo na mail">Zapomenuté heslo</a><br /><!--<a href="change_passwd.php" title="umožňuje změnit si heslo">Změnit heslo</a>--></td></tr>
 </table>
 </form>
 </div>
