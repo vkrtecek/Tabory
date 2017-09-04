@@ -85,19 +85,19 @@ if ( file_exists( "promenne.php" ) )
 		
 		$cnt = 0;
 		echo '<table rules="all" id="last_login_page">';
-		echo '<tr><th colspan="3">Last login</th></tr>';
-		echo '<tr><th>Nick</th><th>Date</th><th>E-mail address</th></tr>';
+		echo '<tr><th colspan="4">Last login</th></tr>';
+		echo '<tr><th>Nick</th><th>Date</th><th>E-mail address</th><th>Přihlášen</th></tr>';
 		$spojeni->query("SET CHARACTER SET utf8");
 		//$sql = $spojeni->query("SELECT * FROM vlc_last_log ORDER BY date DESC");
-		$sql = $spojeni->query( "SELECT DISTINCT U.nick, U.nickname, (SELECT max(date) FROM vlc_syslog WHERE user_id = U.id) datum, U.mail FROM vlc_syslog S LEFT JOIN vlc_users U ON S.user_id = U.id WHERE U.platnost = 1
+		$sql = $spojeni->query( "SELECT DISTINCT U.nick, U.nickname, (SELECT max(date) FROM vlc_syslog WHERE user_id = U.id) datum, U.mail, (SELECT count(*) FROM vlc_syslog WHERE user_id=U.ID) CNT FROM vlc_syslog S LEFT JOIN vlc_users U ON S.user_id = U.id WHERE U.platnost = 1
 UNION
-SELECT DISTINCT nick, nickname, '0' datum, mail FROM vlc_syslog RIGHT JOIN vlc_users ON user_id = vlc_users.id WHERE platnost= 1 AND user_id IS NULL ORDER BY datum DESC, nickname" );
+SELECT DISTINCT nick, nickname, '0' datum, mail, '0' FROM vlc_syslog RIGHT JOIN vlc_users ON user_id = vlc_users.id WHERE platnost= 1 AND user_id IS NULL ORDER BY datum DESC, nickname" );
 		while ($uzivatel = mysqli_fetch_array($sql))
 		{
 			echo  '<tr class="';
 			echo $cnt % 2 == 0 ? 'odd' : 'sude';
 			//echo '"><td>'.toHacky( $uzivatel['nick'], $spojeni ).'</td><td>'.dateToReadableFormat($uzivatel['date']).'</td><td>'.$uzivatel['mail'].'</td><td>'.$uzivatel['IP_address'].'</td></tr>';
-			echo '"><td>'.toHacky( $uzivatel['nick'], $spojeni ).'</td><td>'.dateToReadableFormat($uzivatel['datum']).'</td><td>'.$uzivatel['mail'].'</td></tr>';
+			echo '"><td>'.toHacky( $uzivatel['nick'], $spojeni ).'</td><td>'.dateToReadableFormat($uzivatel['datum']).'</td><td>'.$uzivatel['mail'].'</td><td>'.$uzivatel['CNT'].'&times;</td></tr>';
 			$cnt++;
 		}
 		echo '</table>';
