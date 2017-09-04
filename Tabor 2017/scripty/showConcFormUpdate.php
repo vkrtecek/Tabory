@@ -89,7 +89,7 @@ if ( file_exists( "../../promenne.php") && require( "../../promenne.php" ) )
 					<label for="telM">Telefon na matku</label>
 				</td>
 				<td>
-					<input id="telM" type="tel" name="telM" value="<?php echo $mem['telM'] == '0' ? '' : $mem['telO']; ?>" />
+					<input id="telM" type="tel" name="telM" value="<?php echo $mem['telM'] == '0' ? '' : $mem['telM']; ?>" />
 				</td>
 			</tr>
 			<tr>
