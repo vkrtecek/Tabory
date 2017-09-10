@@ -28,7 +28,7 @@ function IDFromNick( $in, & $spojeni )
 	return $tmp['RES'] == '' ? $in : $tmp['RES'];
 }
 
-function dateToReadableFormat( $date )
+function dateToReadableFormat( $date, $months = NULL )
 {
 	if ( $date == '0' || $date == NULL) return '';
 	
@@ -36,7 +36,7 @@ function dateToReadableFormat( $date )
 	else if ( count(explode(' ', $date)) == 1 ) $time = NULL;
 	else return $date;
 	list( $year, $month, $day ) = explode( '-', $date );
-	$months = array( 'leden', 'únor', 'březen', 'duben', 'květen', 'červen', 'červenec', 'srpen', 'září', 'říjen', 'listopad', 'prosinec' );
+	if ( !$months ) $months = array( 'leden', 'únor', 'březen', 'duben', 'květen', 'červen', 'červenec', 'srpen', 'září', 'říjen', 'listopad', 'prosinec' );
 	$month = $month == '01' ? $months[0] : ( $month == '02' ? $months[1] : ( $month == '03' ? $months[2] : ( $month == '04' ? $months[3] : ( $month == '05' ? $months[4] : ( $month == '06' ? $months[5] : ( $month == '07' ? $months[6] : ( $month == '08' ? $months[7] : ( $month == '09' ? $months[8] : ( $month == '10' ? $months[9] : ( $month == '11' ? $months[10] : ( $months[11] )))))))))));
 	return $day.'. '.$month.' '.$year.($time != NULL ? ' | '.$time : '');
 }
@@ -46,6 +46,14 @@ function isAdmin( $name, & $spojeni )
 	$sql = $spojeni->query( "SELECT * FROM vlc_users WHERE nick = '".$name."'" );
 	$person = mysqli_fetch_array( $sql );
 	return $person['admin'] == 1 ? true : false;
+}
+
+function translateByCode( &$spojeni, $column, $value, $code ) {
+	$st = "SELECT * FROM utr_translations WHERE LanguageCode in (SELECT LanguageCode FROM utrata_members WHERE ".$column."='".$value."')";
+	$sqlTranslations = $spojeni->query( $st );
+	while( $translate = mysqli_fetch_array($sqlTranslations, MYSQLI_ASSOC) )
+		if ( $translate['TranslateCode'] == $code ) return $translate['Value'];
+	return NULL;
 }
 
 /**
@@ -93,4 +101,3 @@ Server: 79175.w75.wedos.net
 Login: w79175_krtek
 Heslo: sefFU6eh
 */
-?>
