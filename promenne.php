@@ -1,14 +1,5 @@
 <?php 
 
-$db_host = 'localhost';
-$db_username = 'root';
-$db_password = 'ahoj';
-$db_name = 'vlc_login_users';
-
-$spravce = 'krtek@zlin6.cz';
-
-
-
 function toHacky( $in, & $spojeni )
 {
 	$tmp = $spojeni->query( "SELECT nickname RES FROM vlc_users WHERE nick = '".$in."'" );
@@ -26,6 +17,15 @@ function IDFromNick( $in, & $spojeni )
 	$tmp = $spojeni->query( "SELECT id RES FROM vlc_users WHERE nick = '".$in."'" );
 	$tmp = mysqli_fetch_array( $tmp );
 	return $tmp['RES'] == '' ? $in : $tmp['RES'];
+}
+
+function toDefaultTime( $in )
+{
+	$date = explode( ' ', $in );
+	if ( count($date) == 1 ) return $in;
+	$time = explode( ':', $date[1] );
+	
+	return $date[0].'T'.$time[0].':'.$time[1];
 }
 
 function dateToReadableFormat( $date, $months = NULL )
@@ -71,17 +71,20 @@ function writeLog( $l, $path = '.', $file = 'logFile.txt' ) {
 ';
 	file_put_contents( $path.DIRECTORY_SEPARATOR.'help'.DIRECTORY_SEPARATOR.'logs'.DIRECTORY_SEPARATOR.$file, $log, FILE_APPEND );
 }
-/*
-$db_host = 'wm70.wedos.net';
-$db_username = 'w79175_vlcata';
-$db_password = '7hP874ML';
-$db_name = 'd79175_vlcata';
 
 
-//plný přístup:
-$db_username = 'a79175_vlcata';
-$db_password = 'RkAmcKJb';
-
+//add the right variables to connect the database
+switch ($_SERVER['SERVER_NAME']) {
+	case 'localhost':
+		require_once 'variables.php';
+		break;
+	case 'vlcata.pohrebnisluzbazlin.cz':
+		require_once 'variables_server.php';
+		break;
+	default:
+		require_once 'variables.php';
+		break;
+}
 /*
 
 Databázový server: wm70.wedos.net

@@ -7,3 +7,5 @@
 *.pdf
 /utrata
 /help/logs/*.txt
+variables.php
+variables_server.php
