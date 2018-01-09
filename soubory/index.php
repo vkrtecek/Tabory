@@ -155,7 +155,7 @@ else
         	$spojeni->query("SET CHARACTER SET UTF8");
 			$sql = $spojeni->query("SELECT * FROM vlc_users");
 			while ( $a = mysqli_fetch_array($sql) )
-				echo '<option value="'.$a['nick'].'">'.toHacky( $a['nick'], $spojeni ).'</option>';
+				echo '<option value="'.$a['ID'].'">'.toHacky( $a['nick'], $spojeni ).'</option>';
 		}
 		?>
     </select>
