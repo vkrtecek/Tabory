@@ -1,4 +1,6 @@
 {
+  "name": "vkrtecek/Tabory",
+  "description": "Tabory Vlcat",
   "require": {
     "php": ">=5.6"
   }
